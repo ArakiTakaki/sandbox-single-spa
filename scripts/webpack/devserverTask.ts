@@ -1,10 +1,10 @@
 import { buildConfig } from "./builds";
-import { webpackAsync } from './util/polyfill';
+import { webpackDevServerAsync } from './util/polyfill';
 import createLogger from "../logger";
 
 Object.entries(buildConfig).map(([key, config]) => {
   const logger = createLogger('webpack');
-  webpackAsync(config).then(() => {
+  webpackDevServerAsync(config).then(() => {
     logger.info({
       processName: key,
     }, 'success message');
@@ -15,4 +15,3 @@ Object.entries(buildConfig).map(([key, config]) => {
     }, error);
   });
 });
-

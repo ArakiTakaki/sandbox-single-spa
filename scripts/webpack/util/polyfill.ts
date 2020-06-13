@@ -15,6 +15,10 @@ export const webpackAsync = (
         reject(error);
         return;
       }
+      if (status.hasErrors()) {
+        reject(status.toString());
+        return;
+      }
       resolve({
         status: status,
         webpack: process,
@@ -33,9 +37,7 @@ export const webpackAsync = (
 
 export const webpackDevServerAsync = (config: webpack.Configuration) => {
   return new Promise((resolve, reject) => {
-    const devServer = new webpackDevServer(webpack(config), {
-      noInfo: false,
-    });
+    const devServer = new webpackDevServer(webpack(config), config.devServer);
     devServer.listen(
       config.devServer?.port || 3000,
       config.devServer?.host || '0.0.0.0',

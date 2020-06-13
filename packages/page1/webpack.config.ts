@@ -1,12 +1,11 @@
 import webpackMerge from 'webpack-merge';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import makeBaseConfig from '../../scripts/webpack/baseConfig';
 import path from 'path';
 
 const baseConfig = makeBaseConfig('core');
 export default webpackMerge(baseConfig, {
   entry: {
-    index: path.resolve(__dirname, 'src/entries.ts'),
+    index: path.resolve(__dirname, 'src/index.tsx'),
   },
   output: {
     filename: '[name].js',
@@ -15,14 +14,8 @@ export default webpackMerge(baseConfig, {
   },
   devServer: {
     headers: { 'Access-Control-Allow-Origin': '*' },
-    port: 3030,
+    port: 3031,
     disableHostCheck: true,
     historyApiFallback: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.ejs'),
-      inject: false,
-    }),
-  ]
 });

@@ -2,17 +2,13 @@ import webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { isDev } from '../constants';
 
-export interface IWebpackConfig {
-  isPrd: boolean,
-};
-
 const makeBaseConfig = (
   name: string,
 ): webpack.Configuration => {
   return ({
     name: name,
-    mode: isDev ? 'production' : 'development',
-    devtool: isDev ? undefined : 'inline-source-map',
+    mode: isDev ? 'development' : 'production',
+    devtool: isDev ?'inline-source-map' : undefined ,
     target: 'web',
     module: {
       rules: [
