@@ -2,12 +2,5 @@
   "name": "core",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "ts-node ./start.ts",
-    "build": "cross-env NODE_ENV=production yarn ts-node ./build.ts"
-  },
-  "dependencies": {
-    "single-spa": "^5.5.3"
-  }
+  "license": "MIT"
 }
