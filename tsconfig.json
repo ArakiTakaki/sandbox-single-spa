@@ -7,7 +7,6 @@
     "allowJs": true,
     // "checkJs": true,
     "jsx": "react",
-
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -16,10 +15,7 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "types": [
-      "node",
-      "systemjs"
-    ],
+    "types": [ "node", "systemjs" ],
     "esModuleInterop": true,
     /* Advanced Options */
     "skipLibCheck": true,

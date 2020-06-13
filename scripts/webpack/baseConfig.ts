@@ -17,20 +17,17 @@ const makeBaseConfig = (
         },
         {
           test: /\.(ts|tsx)$/,
-          use: [
-            { loader: 'ts-loader', }
-          ],
+          loader: 'ts-loader',
+          options: {
+            appendTsSuffixTo: [/\.vue$/],
+          },
         },
         {
           test: /\.(jpg|png|svg|ico)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: "[name]_[hash].[ext]",
-              }
-            }
-          ],
+          loader: 'file-loader',
+          options: {
+            name: "[name]_[hash].[ext]",
+          }
         },
       ],
     },

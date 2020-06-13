@@ -1,0 +1,23 @@
+{
+  "name": "page2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./start.ts",
+    "build": "cross-env NODE_ENV=production yarn ts-node ./build.ts"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "single-spa-vue": "^1.8.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@types/vue": "^2.0.0",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
