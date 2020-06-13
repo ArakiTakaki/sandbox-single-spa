@@ -1,8 +1,0 @@
-
-  {
-    "imports": {
-      "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.1/lib/system/single-spa.min.js",
-      "parent-app": "http://localhost:3030/index.js",
-      "page1": "http://localhost:3031/index.js"
-    }
-  }
