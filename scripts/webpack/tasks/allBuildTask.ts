@@ -1,6 +1,6 @@
-import { buildConfig } from "./builds";
-import { webpackAsync } from './util/polyfill';
-import createLogger from "../logger";
+import { buildConfig } from "../builds";
+import { webpackAsync } from '../util/polyfill';
+import createLogger from "../../logger";
 
 Object.entries(buildConfig).map(([key, config]) => {
   const logger = createLogger('webpack');

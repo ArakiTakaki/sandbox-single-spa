@@ -9,8 +9,8 @@
   ],
   "private": true,
   "scripts": {
-    "start:all": "ts-node scripts/webpack/devServerTask.ts",
-    "build:all": "ts-node scripts/webpack/buildTask.ts"
+    "start:all": "ts-node scripts/webpack/tasks/allDevServerTask.ts",
+    "build:all": "ts-node scripts/webpack/tasks/allBuildTask.ts"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
